@@ -1,0 +1,55 @@
+**Spreadsheet Project**
+
+Southwest Pharmacy, a midsized pharmacy chain with 38 stores in America. The pharmacy is considering discontinuing a bubble bath product called 'Splashtastic'. I am here to analyze the impact and show whether this action would be good for the business or not.
+
+
+I access the database and write a query to retrieve data about Splashtastic from all the 38 stores of American Southwest. I downloaded the data, then used a spreadsheet to process and analyze it.. 
+
+
+Retrieving valid data columns essential for proper analysis 
+`Select  Store Number, Average Daily Customers,  Average Daily Splashtastic Sales (Units), Average Daily Splashtastic Sales (Dollars), Average Total Daily Sales (All Products) from Southwest_database`
+
+
+Creating a column 'Percentage of Total Sales - Splashtastic' using custom formula 
+`=(Average Daily Splashtastic Sales (Dollars)/Percentage of Total Sales - Splashtastic)`
+> Note: This is not multiplied by 100 in this step. 
+
+
+Using data format option to make data in new column consistent in percentage format
+`Select column - Click Format - Number - Percent `
+>This will multiply the values of the new column with 100 and show as a percentage
+
+
+Copy all the data in new column and 'paste as special (values only)' in the same column so that we get data as number percentage and not as formula.
+
+
+Using conditional formatting for rows containing 0.00% in 'Percentage of Total Sales - Splashtastic' column
+`Select column - Click Format- Conditional Formatting - Format rules - Is equal to 0 - Formatting style - Fill Color=Red`
+
+
+We notice that store number 15 has got 0.00% and it turned red with conditional formatting. This shows that the sale is not even close to 1%
+
+
+Now calculating 'Average percentage of total sales - at all stores' using AVG function
+`=AVERAGE(F2:F39)`  
+> F2 to F39 contains 'Percentage of Total Sales - Splashtastic' at 38 stores respectively.
+
+
+The result comes out to be only 1.21%. 
+
+
+Finding the max sales percentage in a store
+`=MAX(F2:F39)`
+>This gives the max percentage in a store. Now the task is to find that store number.
+ 
+
+Let's find out which store has got the highest 'Percentage of Total Sales - Splashtastic', we will use VLOOKUP function for this.
+> Remember: In VLOOKUP, the search key must be in the first column. So, make sure  'Percentage of Total Sales - Splashtastic' is in column A.
+`=VLOOKUP(I13,A1:F39,2)`
+
+
+The result comes out to be 38. So, as per the analysis store 38 has highest sales percentage of Splashtastic. This insight can be very useful for the stake holders in decision making process.
+
+
+
+Link to the sheet - https://docs.google.com/spreadsheets/d/1IuL39xajPc6z8Nu3W8_3LbFbOay86Dj2PvEuyhTvkAM/edit?usp=sharing
