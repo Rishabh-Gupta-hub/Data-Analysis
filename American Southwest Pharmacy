@@ -3,11 +3,11 @@
 Southwest Pharmacy, a midsized pharmacy chain with 38 stores in America. The pharmacy is considering discontinuing a bubble bath product called 'Splashtastic'. I am here to analyze the impact and show whether this action would be good for the business or not.
 
 
-I access the database and write a query to retrieve data about Splashtastic from all the 38 stores of American Southwest. I downloaded the data, then used a spreadsheet to process and analyze it.. 
+I access the database and write a query to retrieve data about Splashtastic from all the 38 stores of American Southwest. I downloaded the data, then used a spreadsheet to process and analyze it.
 
 
 Retrieving valid data columns essential for proper analysis 
-`Select  Store Number, Average Daily Customers,  Average Daily Splashtastic Sales (Units), Average Daily Splashtastic Sales (Dollars), Average Total Daily Sales (All Products) from Southwest_database`
+Select  Store Number, Average Daily Customers,  Average Daily Splashtastic Sales (Units), Average Daily Splashtastic Sales (Dollars), Average Total Daily Sales (All Products) from Southwest_database
 
 
 Creating a column 'Percentage of Total Sales - Splashtastic' using custom formula 
